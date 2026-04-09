@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدليل الشامل لفريق Nexora - الرؤية وخطة العمل</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Tajawal:wght@300;500;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #050505;
+            color: #e2e8f0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        /* Background Glow Effects */
+        .glow-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .glow-blob-1 {
+            position: absolute; top: -10%; right: -5%;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(249,115,22,0.15) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%; filter: blur(60px);
+        }
+        .glow-blob-2 {
+            position: absolute; bottom: -20%; left: -10%;
+            width: 700px; height: 700px;
+            background: radial-gradient(circle, rgba(124,45,18,0.2) 0%, rgba(0,0,0,0) 70%);
+            border-radius: 50%; filter: blur(80px);
+        }
+
+        /* Glassmorphism & Cards */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .glass-card:hover {
+            border-color: rgba(249, 115, 22, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(249, 115, 22, 0.15);
+            transform: translateY(-5px);
+        }
+
+        /* Typography */
+        .gradient-text {
+            background: linear-gradient(135deg, #f97316 0%, #fb923c 50%, #ea580c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .step-number {
+            font-family: 'Tajawal', sans-serif;
+            background: linear-gradient(to bottom, #f97316, #9a3412);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Specific Elements */
+        .timeline-line {
+            position: absolute;
+            right: 5px;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background: linear-gradient(to bottom, #f97316, transparent);
+        }
+        .timeline-dot {
+            position: relative;
+            padding-right: 2rem;
+        }
+        .timeline-dot::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            background: #050505;
+            border: 2px solid #f97316;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(249,115,22,0.5);
+            z-index: 2;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0c; }
+        ::-webkit-scrollbar-thumb { background: #ea580c; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #f97316; }
+    </style>
+</head>
+<body class="antialiased relative">
+
+    <!-- Background Decoration -->
+    <div class="glow-bg">
+        <div class="glow-blob-1"></div>
+        <div class="glow-blob-2"></div>
+    </div>
+
+    <main class="relative z-10 max-w-5xl mx-auto px-6 py-20">
+        
+        <!-- ================= HERO HEADER ================= -->
+        <header class="mb-24 text-center relative">
+            <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-orange-500/20 bg-orange-500/5 text-orange-400 text-sm font-bold mb-6 tracking-widest uppercase">
+                <i class="fas fa-rocket"></i> Nexora Official Blueprint
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                خطة العمل والرؤية الشاملة <br>
+                <span class="gradient-text tracking-tight">لفريق NEXORA</span>
+            </h1>
+            <p class="text-slate-400 text-lg md:text-xl max-w-3xl mx-auto font-light leading-relaxed">
+                هذه الوثيقة هي دستور الفريق؛ تجمع بين الرؤية الاستراتيجية، الأهداف المرحلية، وتوزيع المهام بوضوح لضمان انطلاقة احترافية لا تُنسى في الـ 90 يوماً القادمة.
+            </p>
+        </header>
+
+        <!-- ================= SECTION 1: VISION & TARGET ================= -->
+        <section class="mb-20">
+            <div class="flex items-center gap-4 mb-10">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center shadow-lg shadow-orange-500/30">
+                    <i class="fas fa-eye text-white text-xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold">الرؤية والهدف المشترك</h2>
+                <div class="h-[1px] flex-grow bg-gradient-to-l from-slate-800 to-transparent"></div>
+            </div>
+
+            <div class="glass-card p-10 rounded-[2rem] relative overflow-hidden group">
+                <div class="absolute -top-10 -right-10 text-9xl text-white/5 group-hover:text-orange-500/5 transition-colors duration-500">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <div class="relative z-10">
+                    <h3 class="text-2xl font-bold text-orange-400 mb-4">بناء حضور رقمي لا يمكن تجاهله</h3>
+                    <p class="text-lg text-slate-300 leading-relaxed mb-8">
+                        تركيزنا الأساسي ينصب على الجودة الفنية الاستثنائية والمحتوى الذكي كبوابة للنمو. لا نبحث عن أرقام وهمية، بل عن تأثير حقيقي وقيمة ملموسة.
+                    </p>
+                    <div class="bg-orange-500/10 border border-orange-500/20 p-6 rounded-2xl flex flex-col md:flex-row items-center gap-6">
+                        <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg shadow-orange-500/40">
+                            <i class="fas fa-star text-2xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-1">الهدف الذهبي (المدى القريب)</h4>
+                            <p class="text-orange-200 font-medium">استقطاب <span class="text-white font-black underline decoration-orange-500">أول 5 عملاء حقيقيين</span> + بناء مجتمع من <span class="text-white font-black underline decoration-orange-500">1000 متابع حقيقي متفاعل</span>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION 2: LEADERSHIP ================= -->
+        <section class="mb-20">
+            <div class="flex items-center gap-4 mb-10">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-slate-700 to-slate-900 flex items-center justify-center border border-white/10">
+                    <i class="fas fa-crown text-orange-500 text-xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold">الهيكل الإداري والتقني</h2>
+                <div class="h-[1px] flex-grow bg-gradient-to-l from-slate-800 to-transparent"></div>
+            </div>
+
+            <div class="bg-gradient-to-br from-slate-900 to-[#0a0a0c] p-10 rounded-[2rem] border border-orange-500/20 shadow-2xl relative overflow-hidden">
+                <div class="absolute right-0 top-0 w-2 h-full bg-gradient-to-b from-orange-500 to-orange-800"></div>
+                <h3 class="text-2xl font-bold text-white mb-3 flex items-center gap-3">
+                    قائد الفريق والمشرف العام
+                </h3>
+                <p class="text-slate-400 mb-8 leading-relaxed max-w-3xl">
+                    يتولى قائد الفريق مسؤولية الربط بين كافة الأقسام، ضمان جودة المخرجات، وتوجيه الدفة نحو الرؤية الموضوعة، بالإضافة إلى تنفيذ مهام محورية أساسية:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="glass-card p-5 rounded-xl text-center hover:-translate-y-2 transition-transform">
+                        <i class="fas fa-code text-3xl text-orange-500 mb-3 block"></i>
+                        <span class="font-bold text-sm">تطوير المواقع والحلول</span>
+                    </div>
+                    <div class="glass-card p-5 rounded-xl text-center hover:-translate-y-2 transition-transform">
+                        <i class="fas fa-video text-3xl text-orange-500 mb-3 block"></i>
+                        <span class="font-bold text-sm">المونتاج والموشن جرافيك</span>
+                    </div>
+                    <div class="glass-card p-5 rounded-xl text-center hover:-translate-y-2 transition-transform">
+                        <i class="fas fa-bullhorn text-3xl text-orange-500 mb-3 block"></i>
+                        <span class="font-bold text-sm">التخطيط والحملات</span>
+                    </div>
+                    <div class="glass-card p-5 rounded-xl text-center hover:-translate-y-2 transition-transform">
+                        <i class="fas fa-pen-nib text-3xl text-orange-500 mb-3 block"></i>
+                        <span class="font-bold text-sm">صياغة المحتوى</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION 3: CREATIVE ROLES ================= -->
+        <section class="mb-20">
+            <div class="flex items-center gap-4 mb-10">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center shadow-lg shadow-orange-500/30">
+                    <i class="fas fa-users text-white text-xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold">توزيع الأدوار الإبداعية</h2>
+                <div class="h-[1px] flex-grow bg-gradient-to-l from-slate-800 to-transparent"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Tuqa Role -->
+                <div class="glass-card p-8 rounded-[2rem] border-t-4 border-t-orange-500 flex flex-col h-full relative overflow-hidden">
+                    <div class="absolute -right-4 -bottom-4 opacity-5">
+                        <i class="fas fa-paint-brush text-9xl"></i>
+                    </div>
+                    <div class="flex justify-between items-start mb-6 relative z-10">
+                        <div>
+                            <h3 class="text-3xl font-black text-white mb-1">تقى</h3>
+                            <p class="text-orange-400 text-sm font-bold uppercase tracking-wider">Creative Designer</p>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 text-slate-300 flex-grow relative z-10">
+                        <li class="flex items-start gap-3 bg-white/5 p-3 rounded-lg">
+                            <i class="fas fa-check-circle mt-1 text-orange-500"></i>
+                            <span>تطوير وتوحيد <strong>الهوية البصرية</strong> (الشعار، الخطوط، الألوان).</span>
+                        </li>
+                        <li class="flex items-start gap-3 bg-white/5 p-3 rounded-lg">
+                            <i class="fas fa-check-circle mt-1 text-orange-500"></i>
+                            <span>إعادة تصميم وتحسين جماليات الموقع الرسمي <strong>nexorateam.online</strong>.</span>
+                        </li>
+                        <li class="flex items-start gap-3 bg-white/5 p-3 rounded-lg">
+                            <i class="fas fa-check-circle mt-1 text-orange-500"></i>
+                            <span>بناء <strong>قوالب (Templates)</strong> السوشيال ميديا الموحدة والاحترافية.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Firas Role -->
+                <div class="glass-card p-8 rounded-[2rem] border-t-4 border-t-blue-500 flex flex-col h-full relative overflow-hidden">
+                    <div class="absolute -right-4 -bottom-4 opacity-5">
+                        <i class="fas fa-comments text-9xl"></i>
+                    </div>
+                    <div class="flex justify-between items-start mb-6 relative z-10">
+                        <div>
+                            <h3 class="text-3xl font-black text-white mb-1">فراس</h3>
+                            <p class="text-blue-400 text-sm font-bold uppercase tracking-wider">Account Manager</p>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                    </div>
+                    <ul class="space-y-4 text-slate-300 flex-grow relative z-10">
+                        <li class="flex items-start gap-3 bg-white/5 p-3 rounded-lg">
+                            <i class="fas fa-check-circle mt-1 text-blue-500"></i>
+                            <span>إدارة حسابات <strong>التواصل الاجتماعي</strong> وجدولة النشر المنتظم.</span>
+                        </li>
+                        <li class="flex items-start gap-3 bg-white/5 p-3 rounded-lg">
+                            <i class="fas fa-check-circle mt-1 text-blue-500"></i>
+                            <span>كتابة <strong>المحتوى الإبداعي (Captions)</strong> والنصوص التسويقية الجذابة.</span>
+                        </li>
+                        <li class="flex items-start gap-3 bg-white/5 p-3 rounded-lg">
+                            <i class="fas fa-check-circle mt-1 text-blue-500"></i>
+                            <span>إدارة <strong>التفاعل</strong> اليومي وبناء علاقة قوية مع الجمهور المستهدف.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION 4: GOALS PHILOSOPHY ================= -->
+        <section class="mb-20">
+            <div class="flex items-center gap-4 mb-10">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center shadow-lg shadow-orange-500/30">
+                    <i class="fas fa-chart-line text-white text-xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold">فلسفة الأهداف والمستويات (Levels)</h2>
+                <div class="h-[1px] flex-grow bg-gradient-to-l from-slate-800 to-transparent"></div>
+            </div>
+
+            <!-- Intro to philosophy -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-l-orange-500">
+                    <h3 class="text-xl font-bold text-white mb-2">النمو التدريجي</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        بدلاً من وضع هدف ضخم يسبب القلق، قمنا بتقسيم الرحلة إلى محطات. كل محطة (Level) هي نجاح بحد ذاته. الوصول لـ Level 1 يعني أننا "نجحنا"، وما يليه هو "توسع".
+                    </p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl border-l-4 border-l-orange-500">
+                    <h3 class="text-xl font-bold text-white mb-2">الجودة قبل العدد</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        نحن لا نبحث عن "أرقام وهمية". 1000 متابع حقيقي مهتم أفضل من 10 آلاف عشوائي. أهدافنا مصممة لتبني "قيمة حقيقية" وليس مجرد إحصائيات فارغة.
+                    </p>
+                </div>
+            </div>
+
+            <!-- The Levels -->
+            <div class="space-y-6">
+                <!-- Level 1 -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col md:flex-row gap-6 items-center hover:bg-white/5 transition-colors">
+                    <div class="text-center md:text-right md:w-32 flex-shrink-0">
+                        <span class="step-number text-6xl font-black block">01</span>
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">المستوى الأول</span>
+                    </div>
+                    <div class="h-16 w-px bg-white/10 hidden md:block"></div>
+                    <div class="flex-grow text-center md:text-right">
+                        <h4 class="text-xl font-bold text-white mb-2">مستوى إثبات الوجود (Safety Zone)</h4>
+                        <p class="text-orange-400 font-medium mb-2"><i class="fas fa-flag-checkered ml-1"></i> الهدف: عميل واحد + 200 متابع.</p>
+                        <p class="text-sm text-slate-400 leading-relaxed"><strong>المغزى:</strong> كسر حاجز البداية، إثبات أن السوق يحتاج لخدماتنا، والحصول على أول تقييم حقيقي من عميل فعلي.</p>
+                    </div>
+                </div>
+
+                <!-- Level 3 -->
+                <div class="bg-gradient-to-r from-orange-600 to-orange-900 p-6 rounded-2xl flex flex-col md:flex-row gap-6 items-center shadow-2xl shadow-orange-900/40 border border-orange-500/30 transform md:scale-105 z-10 relative">
+                    <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+')] opacity-20 pointer-events-none"></div>
+                    <div class="text-center md:text-right md:w-32 flex-shrink-0 relative z-10">
+                        <span class="text-6xl font-black text-white block drop-shadow-lg">03</span>
+                        <span class="text-xs font-bold text-orange-200 uppercase tracking-widest">المستوى الذهبي</span>
+                    </div>
+                    <div class="h-16 w-px bg-white/20 hidden md:block relative z-10"></div>
+                    <div class="flex-grow text-center md:text-right relative z-10">
+                        <h4 class="text-2xl font-black text-white mb-2">مستوى الاستقرار (The Golden Goal)</h4>
+                        <p class="text-orange-100 font-medium mb-2 text-lg"><i class="fas fa-trophy ml-1"></i> الهدف: 5 عملاء + 1000 متابع.</p>
+                        <p class="text-sm text-white/80 leading-relaxed"><strong>المغزى:</strong> هذا هو "المحرك" الأساسي. هنا تصبح Nexora اسماً معروفاً، ويبدأ العمل بالتدفق بشكل تلقائي بفضل سمعة الفريق القوية.</p>
+                    </div>
+                </div>
+
+                <!-- Level 4 -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col md:flex-row gap-6 items-center opacity-80 hover:opacity-100 transition-opacity">
+                    <div class="text-center md:text-right md:w-32 flex-shrink-0">
+                        <span class="text-6xl font-black text-slate-600 block">04</span>
+                        <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">مستوى التوسع</span>
+                    </div>
+                    <div class="h-16 w-px bg-white/10 hidden md:block"></div>
+                    <div class="flex-grow text-center md:text-right">
+                        <h4 class="text-xl font-bold text-white mb-2">مستوى السيطرة (Dominance)</h4>
+                        <p class="text-slate-300 font-medium mb-2"><i class="fas fa-globe ml-1"></i> الهدف: +7 عملاء + 1500 متابع.</p>
+                        <p class="text-sm text-slate-500 leading-relaxed"><strong>المغزى:</strong> التحول الكامل من فريق ناشئ إلى وكالة رقمية مسيطرة تبدأ في التخطيط للتوسع الخارجي وتكبير حجم الفريق.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION 5: WORK ROUTINE ================= -->
+        <section class="mb-20">
+            <div class="flex items-center gap-4 mb-10">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center shadow-lg shadow-orange-500/30">
+                    <i class="fas fa-calendar-alt text-white text-xl"></i>
+                </div>
+                <h2 class="text-3xl font-bold">نظام وأوقات العمل (بيئة بلا ضغط)</h2>
+                <div class="h-[1px] flex-grow bg-gradient-to-l from-slate-800 to-transparent"></div>
+            </div>
+
+            <div class="bg-black/40 backdrop-blur-xl p-10 rounded-[2rem] border border-white/5 relative">
+                <div class="timeline-line hidden md:block right-12"></div>
+                
+                <div class="space-y-10 relative">
+                    <!-- Saturday -->
+                    <div class="timeline-dot md:pr-10">
+                        <div class="glass-card p-6 rounded-2xl inline-block w-full">
+                            <h4 class="text-orange-500 font-black text-xl mb-2 flex items-center gap-2">
+                                <i class="fas fa-handshake"></i> يوم السبت (نقطة الانطلاق)
+                            </h4>
+                            <p class="text-slate-300">اجتماع الفريق الأسبوعي: نناقش فيه إنجازات الأسبوع الماضي بشفافية، ونضع أهداف ومهام الأسبوع المقبل.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Weekdays -->
+                    <div class="timeline-dot md:pr-10">
+                        <div class="glass-card p-6 rounded-2xl inline-block w-full border-r-4 border-r-blue-500">
+                            <h4 class="text-white font-black text-xl mb-2 flex items-center gap-2">
+                                <i class="fas fa-laptop-code text-blue-400"></i> من الأحد إلى الخميس
+                            </h4>
+                            <p class="text-slate-300">مساحة عمل مرنة ومفتوحة: تنفيذ المهام الإبداعية والإدارية حسب الخطة الموضوعة، كلٌّ حسب دوره بمسؤولية تامة.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Friday -->
+                    <div class="timeline-dot md:pr-10">
+                        <div class="glass-card p-6 rounded-2xl inline-block w-full border-r-4 border-r-red-500 bg-red-500/5">
+                            <h4 class="text-red-400 font-black text-xl mb-2 flex items-center gap-2">
+                                <i class="fas fa-battery-full"></i> يوم الجمعة (إعادة الشحن)
+                            </h4>
+                            <p class="text-slate-300 font-bold italic">إجازة رسمية ومقدسة: راحة تامة للفريق وفصل كامل عن العمل لإعادة شحن الطاقة والإلهام.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FINAL NOTE ================= -->
+        <section class="mb-10 relative z-20">
+            <div class="bg-gradient-to-br from-orange-900/40 to-black p-1 md:p-1 rounded-[3rem] shadow-2xl">
+                <div class="glass-card p-10 md:p-16 rounded-[2.9rem] text-center border-dashed border-2 border-orange-500/30 bg-black/60 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+CjxjaXJjbGUgY3g9IjIiIGN5PSIyIiByPSIxIiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+')] opacity-50"></div>
+                    
+                    <h3 class="text-3xl font-black mb-6 text-white relative z-10"><i class="fas fa-quote-right text-orange-500/50 mr-2 text-2xl"></i> رسالة أخيرة للفريق</h3>
+                    <p class="text-slate-300 text-lg md:text-xl leading-relaxed md:leading-loose max-w-4xl mx-auto relative z-10 font-medium">
+                        هذه الأهداف ليست سيفاً مسلطاً على رقابنا، بل هي بوصلة ترشدنا في الأيام الصعبة.<br>
+                        إذا تعبنا، ننظر لـ <span class="text-orange-500 font-bold bg-orange-500/10 px-2 py-1 rounded">Level 1</span> لنعرف أننا قريبون جداً من إثبات أنفسنا.<br>
+                        وإذا أبدعنا، ننظر لـ <span class="text-orange-500 font-bold bg-orange-500/10 px-2 py-1 rounded">Level 3</span> لنعرف أين سنصل قريباً.<br><br>
+                        نحن نعمل ككيان واحد متلاحم، حيث تتداخل خبراتنا القيادية مع مهاراتكم الإبداعية للوصول باسم <br>
+                        <span class="text-4xl font-black gradient-text tracking-widest uppercase mt-6 inline-block drop-shadow-lg">Nexora</span><br>
+                        إلى القمة.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="text-center pt-12 pb-6 border-t border-white/5 mt-20 relative z-10">
+            <div class="w-16 h-16 mx-auto mb-6 opacity-20">
+                <i class="fas fa-fire-alt text-4xl"></i>
+            </div>
+            <p class="text-slate-500 text-sm font-bold tracking-widest uppercase mb-3">Nexora Digital Team - Official Core Strategy Document</p>
+            <p class="text-orange-500/80 font-black text-xl tracking-wider italic">"نبتكر ببساطة.. نسيطر بجودة"</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
